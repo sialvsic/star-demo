@@ -25,6 +25,10 @@ child.stderr.on('data', (data) => {
   console.error(`stderror ${data}`);
 });
 
+// process.stdin.on('data', (data) => {
+//   console.log('data', data)
+// })
+
 process.on('exit', function name(params) {
   console.log('main process exit');
 })

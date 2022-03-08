@@ -2,6 +2,8 @@ const http = require('http');
 const numCPUs = require('os').cpus().length;
 const cluster = require('cluster');
 
+// console.log(require('os').cpus());
+
 if (cluster.isMaster) {
   console.log('Master process id is', process.pid);
   // fork workers

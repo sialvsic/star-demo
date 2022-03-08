@@ -1,13 +1,13 @@
 //正常输出
-const { exec } = require('child_process');
+const { execFile } = require('child_process');
 
-const child = exec('find . -type f | wc -l', (err, stdout, stderr) => {
+const child = execFile('node', ['-v'], (err, stdout, stderr) => {
   if (err) {
     console.error(`exec error: ${err}`);
     return;
   }
 
-  console.log(`Number of files ${stdout}`);
+  console.log(`node version ${stdout}`);
 });
 
 child.on('close', function (code, signal) {

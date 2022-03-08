@@ -14,9 +14,14 @@ const longComputation = () => {
 const server = http.createServer();
 server.on('request', (req, res) => {
   console.log('request here', req.headers);
+
   if (req.url === '/compute') {
+    console.info('计算开始', new Date())
     const sum = longComputation();
+    console.info('计算结束', new Date())
     return res.end(`Sum is ${sum}`);
+  } else if (req.url === '/test') {
+    return res.end(`test good`);
   } else {
     res.end('Ok');
   }

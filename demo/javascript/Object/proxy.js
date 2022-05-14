@@ -14,3 +14,5 @@ const obj = new Proxy(target, {
 
 console.log(obj.name);
 // obj.name = '12'
+
+console.log('Reflect.ownKeys(target);', Reflect.ownKeys(target));

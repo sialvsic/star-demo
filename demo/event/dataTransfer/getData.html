@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+      }
+
+      .block {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        margin: 20px;
+      }
+
+      .b1 {
+        background-color: greenyellow;
+      }
+
+      .b2 {
+        background-color: rgb(10, 204, 218);
+      }
+
+      .b3 {
+        background-color: rgb(238, 241, 7);
+      }
+
+      .bg {
+        background-color: chocolate;
+      }
+    </style>
+    <script>
+      function OnDragStart(event) {
+        console.log("drag start");
+
+        const value = event.target.innerText;
+        event.dataTransfer.setData("text", value);
+      }
+
+      function OnDrag(event) {
+        // console.log("drag....");
+      }
+
+      function OnDragEnd(params) {
+        console.log("drag end");
+      }
+
+      function OnDragEnter(e) {
+        const node = document.querySelector("#target");
+        node.classList.add("bg");
+        console.log("drag enter");
+      }
+
+      //没有该方法
+      function OnDragExit(params) {
+        console.log("drag exit");
+      }
+
+      function OnDragLeave(params) {
+        const node = document.querySelector("#target");
+        node.classList.remove("bg");
+        console.log("drag leave");
+      }
+
+      function OnDragOver(e) {
+        // console.log("drag over");
+
+        // 阻止默认的重置行为
+        // 即可成为拖拽元素的放置区
+        e.preventDefault();
+      }
+
+      function OnDragDrop(event) {
+        console.log("drag drop");
+
+        var text = event.dataTransfer.getData("text");
+        console.log("text", text);
+        const node = event.target;
+
+        text = text.replace(/-/g, ""); //删除符号-
+
+        node.innerText = text;
+
+        //阻止浏览器默认打开
+        event.preventDefault();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block b1">block1 disable draggable</div>
+
+      <p draggable="true" ondragstart="OnDragStart(event)">132-0803-3621</p>
+
+      <div
+        id="target"
+        class="block b3"
+        ondragenter="OnDragEnter(event)"
+        ondragexit="OnDragExit()"
+        ondragleave="OnDragLeave(event)"
+        ondragover="OnDragOver(event)"
+        ondrop="OnDragDrop(event)"
+      >
+        block3 enable draggable
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+      }
+
+      .block {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        margin: 20px;
+      }
+
+      .b1 {
+        background-color: greenyellow;
+      }
+
+      .b2 {
+        background-color: rgb(10, 204, 218);
+      }
+
+      .b3 {
+        background-color: rgb(238, 241, 7);
+      }
+
+      .bg {
+        background-color: chocolate;
+      }
+    </style>
+    <script>
+      function OnDragStart(event) {
+        console.log("drag start");
+
+        const img = document.getElementsByClassName("img")[0];
+        console.log("img", img);
+        console.log("img", img.src);
+
+        const _img = new Image();
+
+        _img.src = img.src;
+        // img.onload = () => {
+        //   // 设置拖拽图片
+        // };
+
+        event.dataTransfer.setDragImage(_img, 10, 10);
+      }
+
+      function OnDrag(event) {
+        // console.log("drag....");
+      }
+
+      function OnDragEnd(params) {
+        console.log("drag end");
+      }
+
+      function OnDragEnter(e) {
+        const node = document.querySelector("#target");
+        node.classList.add("bg");
+        console.log("drag enter");
+      }
+
+      //没有该方法
+      function OnDragExit(params) {
+        console.log("drag exit");
+      }
+
+      function OnDragLeave(params) {
+        const node = document.querySelector("#target");
+        node.classList.remove("bg");
+        console.log("drag leave");
+      }
+
+      function OnDragOver(e) {
+        // console.log("drag over");
+
+        // 阻止默认的重置行为
+        // 即可成为拖拽元素的放置区
+        e.preventDefault();
+
+        // 设置光标的样式
+        // event.dataTransfer.dropEffect = "move";
+        // event.dataTransfer.dropEffect = "copy";
+        // event.dataTransfer.dropEffect = "link";
+        // event.dataTransfer.dropEffect = "none";
+      }
+
+      function OnDragDrop(event) {
+        console.log("drag drop");
+
+        const files = event.dataTransfer.files || [];
+        console.log(files);
+
+        const items = event.dataTransfer.items || [];
+        console.log(items);
+        console.log(items[0]?.kind);
+        console.log(items[0]?.type);
+
+        console.log(
+          items[0]?.getAsString(function (str) {
+            console.log("\ngetAsString: " + str);
+          })
+        );
+
+        console.log(
+          items[0]?.getAsFile(function (str) {
+            console.log("\ngetAsString: " + str);
+          })
+        );
+
+        //阻止浏览器默认打开
+        event.preventDefault();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block b1">block1 disable draggable</div>
+
+      <div
+        id="source"
+        class="block b2"
+        draggable="true"
+        ondragstart="OnDragStart(event)"
+        ondrag="OnDrag(event)"
+        ondragend="OnDragEnd(event)"
+      >
+        block2 enable draggable
+      </div>
+
+      <div
+        id="target"
+        class="block b3"
+        draggable="true"
+        ondragenter="OnDragEnter(event)"
+        ondragexit="OnDragExit()"
+        ondragleave="OnDragLeave(event)"
+        ondragover="OnDragOver(event)"
+        ondrop="OnDragDrop(event)"
+      >
+        block3 enable draggable
+      </div>
+      <img
+        class="img"
+        src="https://alvinzhoutest.cn/image/fire.png"
+        alt=""
+        style="display: none"
+      />
+    </div>
+  </body>
+</html>

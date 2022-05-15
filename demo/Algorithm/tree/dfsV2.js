@@ -1,6 +1,6 @@
 /*
-广度优先遍历 这里以多叉树为例
-利用队列的特性
+深入优先遍历 这里以树为例
+方法1：利用堆栈的特性
 
 定义三种颜色: 白灰黑
 白色，未遍历
@@ -49,25 +49,31 @@ const tree = {
   color: 'white'
 };
 
-function bfs(tree) {
-  let queue = [];
+function dfs(tree) {
+  let stack = [];
   let order = [];
-  queue.push(tree);
 
-  while (queue.length !== 0) {
-    let node = queue.shift();
-    order.push(node.val);
+  (function travel(node) {
+    node.color = 'gray';
+    stack.push(node);
 
     if (!node.children) {
-      continue;
+      node.color = 'black';
+      let popNode = stack.pop();
+      order.push(popNode.val);
+      return;
     }
 
     node.children.forEach(function (child) {
-      queue.push(child);
-    })
-  }
+      travel(child);
+    });
+
+    node.color = 'black';
+    let popNode = stack.pop();
+    order.push(popNode.val);
+  })(tree);
 
   return order;
 }
 
-console.log(bfs(tree));
+console.log(dfs(tree));

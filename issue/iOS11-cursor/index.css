@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+#modal-shadow {
+  display: none;
+  position: fixed;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+
+}
+
+.modal-wrapper {
+  margin: auto 0;
+}
+
+.modal-content {
+  background-color: darkorange;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.field {
+  padding: 10px 0;
+}
+
+.modal-open{
+  position: fixed !important;
+  width: 100%;
+}

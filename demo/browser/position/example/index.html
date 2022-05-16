@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <title>Sticky</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div class="root">
+  <header class="header">I am header</header>
+  <div class="content"></div>
+  <div class="sticky"></div>
+  <footer class="footer">I am footer</footer>
+</div>
+
+</body>
+<script>
+  let stickyNode = document.getElementsByClassName('sticky')[0];
+
+  function toggleSticky() {
+    if(stickyNode.getBoundingClientRect().bottom === window.innerHeight) {
+      stickyNode.innerHTML = 'I am sticky'
+    } else {
+      stickyNode.innerHTML = 'I am float'
+    }
+  }
+
+  window.onload = function() {
+    window.addEventListener('scroll', () => {
+      toggleSticky()
+    });
+    toggleSticky()
+  }
+
+</script>
+</html>

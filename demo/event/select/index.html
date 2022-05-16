@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+  <title>select</title>
+</head>
+<body>
+<div class="root">
+  <select name="test" id="name-id" onchange="onChange(event)">
+    <option value="a">AAAA</option>
+    <option value="b">BBBB</option>
+    <option value="c">CCCC</option>
+    <option value="d">DDDD</option>
+  </select>
+
+  <button onclick="setOption(0)">set option 1</button>
+  <button onclick="setOption(1)">set option 2</button>
+  <button onclick="setOption(2)">set option 3</button>
+  <button onclick="setOption(3)">set option 4</button>
+  <div></div>
+  <button onclick="getOption()">get option</button>
+</div>
+<script>
+  function onChange(event) {
+    console.log('onchange run');
+    console.log(event);
+  }
+
+
+  //如何使用js触发设置option
+  function setOption(index) {
+    const node = document.querySelector('#name-id');
+    node.selectedIndex = index;
+  }
+
+  function getOption() {
+    const node = document.querySelector('#name-id');
+    console.log(node.options[node.selectedIndex].text);
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+  <link rel="stylesheet" href="./index.css">
+  <script type="text/javascript" src="./index.js"></script>
+  <title>BOM-position</title>
+</head>
+<body>
+<div class="container">
+  <div>
+    <p>浏览器</p>
+    <div>
+      <button onclick="getWindowSize()">获取浏览器窗口的大小</button>
+      <button onclick="getWindowPositionLeft()">获取浏览器窗口的相对于屏幕左边的距离</button>
+      <button onclick="getWindowPositionTop()">获取浏览器窗口的相对于屏幕上边的距离</button>
+    </div>
+    <p>网页</p>
+    <div>
+      <button onclick="getPageSizePart()">获取当前网页大小-Part(不包含隐藏的可滚动部分)</button>
+      <button onclick="getPageSizeTotal()">获取当前网页大小-Total(包含隐藏的可滚动部分)</button>
+    </div>
+    <div>
+      测试-document.documentElement
+      <button onclick="documentElementClientWidthHeight()">document.documentElement.clientWidth/clientHeight</button>
+      <button onclick="documentElementScrollWidthHeight()">document.documentElement.scrollWidth/ScrollHeight</button>
+      <button onclick="documentElementOffsetWidthHeight()">document.documentElement.offsetWidth/offsetHeight</button>
+    </div>
+    <div>
+      测试-document.body
+      <button onclick="documentBodyClientWidthHeight()">document.body.clientWidth/clientHeight</button>
+      <button onclick="documentBodyScrollWidthHeight()">document.body.scrollWidth/ScrollHeight</button>
+      <button onclick="documentBodyOffsetWidthHeight()">document.body.offsetWidth/offsetHeight</button>
+    </div>
+    <p>元素</p>
+    <div>
+      <button onclick="getAbsolutePosition1(this)">该元素距离整个页面的左上角的距离(offset)</button>
+      <button onclick="getAbsolutePosition2(this)">该元素距离整个页面的左上角的距离(BoundingClient)</button>
+      <button onclick="getRelativePosition1(this)">该元素距离当前可视区的左上角的距离</button>
+      <button onclick="getRelativePosition2(this)">该元素距离当前可视区的左上角的距离</button>
+    </div>
+    <p>clientHeight VS scrollHeight VS offsetHeight</p>
+    <button onclick="getBoxClientHeight()">盒子的clientHeight</button>
+    <button onclick="getBoxScrollHeight()">盒子的scrollHeight</button>
+    <button onclick="getBoxOffsetHeight()">盒子的offsetHeight</button>
+    <div id="test-box" class="test-box">
+       <div id="box-content" class="box-content">
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+         <p>我是盒子内部的文字</p>
+       </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+  margin: 10px;
+  min-height: 2000px;
+}
+
+div{
+  padding: 10px;
+}
+
+button{
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+.test-box{
+  width: 500px;
+  height: 100px;
+  overflow: auto;
+  border: 1px solid blueviolet;
+}
+
+.box-content{
+  width: 500px;
+  height: 500px;
+}
+
+.box-content p {
+  line-height: 25px;
+}

@@ -1,0 +1,15 @@
+.fengmiandiv {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  transition: all 0.5s;
+}
+
+.fengmian{
+  height: 200px;
+  width: 400px;
+}
+
+.fengmiandiv:hover .fengmian {
+  transform: translateY(-50%);
+}

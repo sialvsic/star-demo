@@ -1,38 +1,28 @@
+let cacheMap = new Map();
+const cacheLength = 5;
 
-let cache = {};
-let length = [];
+function lru(key, value) {
 
-function lru(uid) {
-
-  if (!cache[uid]) {
-    cache[uid] = uid;
-    length.push(uid);
-  } else {
-    length.splice(uid - 1, 1);
-    length.unshift(uid);
+  if (cacheMap.has(key)) {
+    cacheMap.delete(key);
   }
 
-  if (length > 5) {
-    delete cache[length[length.length - 1]];
-    length.pop();
+  cacheMap.set(key, value);
+
+  if (cacheMap.size > cacheLength) {
+    const oldKey = Array.from(cacheMap.keys()).shift().toString();
+    cacheMap.delete(oldKey);
   }
 
-  console.log(cache);
-  console.log(length);
+  console.log('cacheMap', cacheMap);
 }
 
-// input
-lru(1);
-lru(2);
-lru(3);
-lru(4);
-lru(5);
-lru(63);
-lru(3);
+lru('1', '1');
+lru('2', '2');
+lru('3', '3');
+lru('4', '4');
+lru('3', '3');
+lru('2', '2');
+lru('6', '6');
 
-// output
-
-
-//为什么不用Map
-//问题：使用用户的ID作为输入key
-
+console.log(cacheMap);

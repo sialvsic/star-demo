@@ -11,4 +11,7 @@ req.onreadystatechange = function () {
 
 req.open('GET', 'https://www.baidu.com', true);
 req.setRequestHeader("Content-Type", "application/javascript;charset=UTF-8");
-req.send(null)
+// req.send(null)
+req.send({
+  name: 12
+})

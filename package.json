@@ -27,5 +27,7 @@
     "url": "https://github.com/sialvsic/star-demo/issues"
   },
   "homepage": "https://github.com/sialvsic/star-demo#readme",
-  "dependencies": {}
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
 }

@@ -1,6 +1,6 @@
 /*
-深入优先遍历 这里以树为例
-方法1：利用堆栈的特性
+深入优先遍历 这里以多叉树为例
+方法2：利用堆栈的特性
 
 定义三种颜色: 白灰黑
 白色，未遍历
@@ -21,32 +21,33 @@ const tree = {
     {
       val: 2,
       children: [
-        { val: 5, children: null, color: 'white' },
+        { val: 5, children: null, color: "white" },
         {
-          val: 6, children: [
-            { val: 10, children: null, color: 'white' },
-            { val: 11, children: null, color: 'white' }
-          ], color: 'white'
-        }
+          val: 6,
+          children: [
+            { val: 10, children: null, color: "white" },
+            { val: 11, children: null, color: "white" },
+          ],
+          color: "white",
+        },
       ],
-      color: 'white'
+      color: "white",
     },
     {
       val: 3,
-      children: [
-        { val: 7, children: null, color: 'white' }
-      ], color: 'white'
+      children: [{ val: 7, children: null, color: "white" }],
+      color: "white",
     },
     {
       val: 4,
       children: [
-        { val: 8, children: null, color: 'white' },
-        { val: 9, children: null, color: 'white' }
+        { val: 8, children: null, color: "white" },
+        { val: 9, children: null, color: "white" },
       ],
-      color: 'white'
-    }
+      color: "white",
+    },
   ],
-  color: 'white'
+  color: "white",
 };
 
 function dfs(tree) {
@@ -54,11 +55,11 @@ function dfs(tree) {
   let order = [];
 
   (function travel(node) {
-    node.color = 'gray';
+    node.color = "gray";
     stack.push(node);
 
     if (!node.children) {
-      node.color = 'black';
+      node.color = "black";
       let popNode = stack.pop();
       order.push(popNode.val);
       return;
@@ -68,7 +69,7 @@ function dfs(tree) {
       travel(child);
     });
 
-    node.color = 'black';
+    node.color = "black";
     let popNode = stack.pop();
     order.push(popNode.val);
   })(tree);

@@ -13,6 +13,12 @@ function test3() {
   let a = 3;
 }
 
-test1();
-test2();
-test3();
+function test4() {
+  console.log(1 + a); //ReferenceError: Cannot access 'a' before initialization
+  let a;
+}
+
+// test1();
+// test2();
+// test3();
+test4();

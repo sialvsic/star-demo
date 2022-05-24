@@ -1,27 +1,24 @@
-Function.prototype.myApply1 = function (context, ...args) {
-  if(typeof this !== "function") {
+Function.prototype._apply = function (obj, ...args) {
+  if (typeof this !== "function") {
     throw new TypeError("Error");
   }
 
-  context = context || window;
-  const {fn} = context;
+  const context = obj || window;
 
-  context.fn = this;
-  let result;
+  context._fn = this;
+  let result = context._fn(...args);
 
-  result = context.fn(...args);
+  delete context._fn;
 
-  context.fn = fn;
   return result;
 };
 
 let obj = {
-  name: '234',
+  name: "234",
   getName: function () {
     return this.name;
-  }
+  },
 };
 
 console.log(obj.getName());
-console.log(obj.getName.myApply1({name: '456'}));
-
+console.log(obj.getName._apply({ name: "456" }));

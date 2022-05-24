@@ -1,4 +1,4 @@
-function create(Con, ...args) {
+function _new(Con, ...args) {
   // 创建一个空的对象
   let obj = {};
 
@@ -9,7 +9,7 @@ function create(Con, ...args) {
   let result = Con.apply(obj, ...args);
 
   // 判断构造函数返回值是否为对象，如果为对象就使用构造函数返回的值，否则使用obj
-  return typeof result === 'object' ? result : obj
+  return typeof result === "object" ? result : obj;
 }
 
 function People(age, height) {
@@ -17,5 +17,5 @@ function People(age, height) {
   this.height = height;
 }
 
-let c = create(People, ['12', 180]);
+let c = _new(People, ["12", 180]);
 console.log(c);

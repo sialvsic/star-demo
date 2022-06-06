@@ -1,27 +1,27 @@
-// 实现控制并发的任务
+// 查找文章中出现频率最高的单词;
 
-const { SuperTask } = require("./8-fn");
-
-function timeout(time) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, time);
+function findMostWord(article) {
+  // 合法性判断
+  if (!article) return;
+  // 参数处理
+  article = article.trim().toLowerCase();
+  let wordList = article.match(/[a-z]+/g),
+    visited = [],
+    maxNum = 0,
+    maxWord = "";
+  article = " " + wordList.join("  ") + " ";
+  // 遍历判断单词出现次数
+  wordList.forEach(function (item) {
+    if (visited.indexOf(item) < 0) {
+      // 加入 visited
+      visited.push(item);
+      let word = new RegExp(" " + item + " ", "g"),
+        num = article.match(word).length;
+      if (num > maxNum) {
+        maxNum = num;
+        maxWord = item;
+      }
+    }
   });
+  return maxWord + "  " + maxNum;
 }
-
-const superTask = new SuperTask();
-
-function addTask(time, name) {
-  superTask
-    .add(() => timeout(time))
-    .then(() => {
-      console.log(`任务${name}完成`);
-    });
-}
-
-addTask(10000, 1); // 10000ms后输出 任务1完成
-addTask(5000, 2); // 5000ms后输出 任务2完成
-addTask(3000, 3); // 8000ms后输出 任务3完成
-addTask(4000, 4); // 12000ms后输出 任务4完成
-addTask(5000, 5); // 15000ms后输出 任务5完成

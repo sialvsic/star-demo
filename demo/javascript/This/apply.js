@@ -6,10 +6,16 @@ Function.prototype._apply = function (obj, ...args) {
   const context = obj || window;
 
   context._fn = this;
-  let result = context._fn(...args);
+
+  let result;
+  if (args === undefined || args === null) {
+    //undefined 或者 是 null 不是 Iterator 对象，不能被 ...
+    result = context._fn(args);
+  } else if (typeof args === "object") {
+    result = context._fn(...args);
+  }
 
   delete context._fn;
-
   return result;
 };
 

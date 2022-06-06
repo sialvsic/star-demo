@@ -1,90 +1,34 @@
-/*
-{
-  a: {
-    b: "hello ",
-    c: {
-      d: "world",
-    },
-  },
-  e: "hello world",
-}
-
-// 转换为
-{
-  'a.b': 'hello',
-  'a.c.d': 'hello world',
-  'e': 'hello world'
-}
+/*循环打印红黄绿 
+红灯 3s 亮一次，绿灯 1s 亮一次，黄灯 2s 亮一次；如何让三个灯不断交替重复亮灯？
 */
 
-const obj = {
-  a: {
-    b: "hello ",
-    c: {
-      d: "world",
-    },
-  },
-  e: "hello world",
-};
-
-function flatObjBFS(obj) {
-  let arr = [obj];
-  const res = {};
-  while (arr.length !== 0) {
-    const top = arr.shift();
-    const keys = Object.keys(top);
-
-    let pKey = "";
-    let pValue = "";
-
-    for (let index = 0; index < keys.length; index++) {
-      const key = keys[index];
-      const element = top[key];
-
-      if (typeof element === "object") {
-        arr.push(element);
-      } else {
-        res[key] = element;
-      }
-    }
-  }
-
-  return res;
+function red() {
+  console.log("red");
+}
+function green() {
+  console.log("green");
+}
+function yellow() {
+  console.log("yellow");
 }
 
-console.log(flatObjBFS(obj)); //结果也不对
-
-/*
-//采用深度优先遍历，不满足需求
-function flatObjDFS(obj) {
-  const res = {};
-
-  function deep(o, prefix = "") {
-    const keys = Object.keys(o);
-
-    for (let index = 0; index < keys.length; index++) {
-      const key = keys[index];
-      const element = o[key];
-      if (typeof element === "string") {
-        if (prefix) {
-          res[prefix + "." + key] = element.trim();
-        } else {
-          res[key] = element.trim();
-        }
-      } else {
-        if (prefix) {
-          deep(element, prefix + "." + key);
-        } else {
-          deep(element, key);
-        }
-      }
-    }
-  }
-
-  deep(obj);
-
-  return res;
+function timeout(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
 }
 
-console.log(flatObjDFS(obj)); //{ 'a.b': 'hello', 'a.c.d': 'world', e: 'hello world' }
-*/
+async function run() {
+  while (true) {
+    await timeout(3000);
+    red();
+    await timeout(1000);
+    green();
+    await timeout(2000);
+    yellow();
+  }
+}
+
+run();

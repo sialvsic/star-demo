@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .root {
+      background-color: aquamarine;
+      margin: 20px;
+    }
+
+    .box {
+      padding: 10px;
+      margin: 10px;
+      border: 0.5px solid red;
+      width: 200px;
+      height: 200px;
+      background-color: aquamarine;
+      border-radius: 16px;
+    }
+
+    .scale-1 {
+      margin-top: 20px;
+      border-image: linear-gradient(to bottom, transparent 50%, red 50%) 0 0
+        100%/1px 0;
+    }
+
+    .scale-2 {
+      position: relative;
+      border: none;
+    }
+
+    .scale-2:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      background: #000;
+      width: 200px;
+      height: 1px;
+      /*核心是利用transform缩放边框*/
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+    }
+  </style>
+  <body>
+    <div class="root"></div>
+    <div class="box">我是一个盒子1 使用0.5px</div>
+    <div class="box scale-1">我是一个盒子2 使用border-image</div>
+    <div class="box scale-3">我是一个盒子3 使用border-image</div>
+    <div><span>1px的线</span></div>
+    <div class="scale-2"></div>
+  </body>
+</html>

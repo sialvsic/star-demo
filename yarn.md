@@ -17,3 +17,15 @@ yarn workspace javascript add animejs
 yarn workspace javascript add @types/react @types/animejs -D
 yarn workspace javascript add @types/react-dom -D
 ```
+
+## libs
+
+```
+yarn workspace libs add commander
+```
+
+## https
+
+```
+yarn workspace https add express
+```

@@ -14,7 +14,8 @@
     "demo/*",
     "design-pattern/*",
     "issue/*",
-    "leetcode/*"
+    "leetcode/*",
+    "libs"
   ],
   "repository": {
     "type": "git",

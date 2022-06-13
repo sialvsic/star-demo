@@ -29,5 +29,9 @@
   "homepage": "https://github.com/sialvsic/star-demo#readme",
   "dependencies": {
     "koa": "^2.13.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-less": "2.6.0",
+    "process": "^0.11.10"
   }
 }

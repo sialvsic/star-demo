@@ -23,6 +23,8 @@ yarn workspace javascript add @types/react-dom -D
 ```
 yarn workspace libs add commander
 yarn workspace libs add html2canvas dom-to-image
+yarn workspace libs add antd
+yarn workspace libs add puppeteer
 ```
 
 ## https

@@ -25,6 +25,8 @@ yarn workspace libs add commander
 yarn workspace libs add html2canvas dom-to-image
 yarn workspace libs add antd
 yarn workspace libs add puppeteer
+yarn workspace libs add lodash
+yarn workspace libs add @types/lodash -D
 ```
 
 ## https

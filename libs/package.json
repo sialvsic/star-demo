@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./_html2Canvas/test/index.html",
+    "dev:html2canvas": "parcel ./_html2Canvas/test/index.html",
+    "dev:lodash": "parcel ./_lodash/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,6 +16,10 @@
     "commander": "^9.3.0",
     "dom-to-image": "^2.6.0",
     "html2canvas": "^1.4.1",
+    "lodash": "^4.17.21",
     "puppeteer": "^14.4.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182"
   }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs } from "antd";
+import { Tabs, Tag } from "antd";
 import Basic from "./Basic";
 import "antd/dist/antd.css";
 import "./App.less";

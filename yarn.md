@@ -34,3 +34,9 @@ yarn workspace libs add @types/lodash -D
 ```
 yarn workspace https add express
 ```
+
+## typescript
+
+```
+yarn workspace typescript add parcel
+```

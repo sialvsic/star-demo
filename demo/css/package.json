@@ -1,16 +1,13 @@
 {
-  "name": "typescript",
+  "name": "css",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./react/index.html",
+    "dev": "parcel ./skeleton/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "parcel": "^2.6.2"
-  }
+  "license": "ISC"
 }

@@ -40,3 +40,9 @@ yarn workspace https add express
 ```
 yarn workspace typescript add parcel
 ```
+
+## css
+
+```
+yarn workspace typescript add parcel
+```

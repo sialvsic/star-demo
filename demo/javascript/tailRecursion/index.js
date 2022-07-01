@@ -8,10 +8,9 @@ function sum(i) {
   return i + sum(i - 1);
 }
 
-// const r = sum(10000); //10000
-// console.log("r", r);
+const r = sum(10000); //10000
+console.log("r", r);
 
-//TODO:有问题
 function tailSum(i, sum) {
   // console.log("i", i);
   // console.log("sum", sum);
@@ -22,5 +21,5 @@ function tailSum(i, sum) {
   return tailSum(i - 1, sum + i);
 }
 
-const s = tailSum(20000, 0); //10000
+const s = tailSum(10000, 0); //20000 的时候因为调用栈的深度而报错
 console.log("s", s);

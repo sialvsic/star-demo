@@ -38,6 +38,8 @@ export default class StateClass extends Component<{}, State> {
   }
 
   render() {
+    console.log("state", this.state.count);
+
     return <div>StateClass</div>;
   }
 }

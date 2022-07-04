@@ -1,3 +1,9 @@
+## 全局
+```sh
+yarn add -W typescript
+```
+
+
 ## koa template
 
 ```sh

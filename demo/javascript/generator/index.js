@@ -1,9 +1,10 @@
+//迭代器
 var x = 1;
 
 function* foo() {
   x++;
   yield;
-  console.log('x', x);
+  console.log("x", x);
 }
 
 function bar() {
@@ -12,4 +13,4 @@ function bar() {
 
 var it = foo();
 
-it.next()
+it.next();

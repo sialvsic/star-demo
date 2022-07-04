@@ -46,3 +46,9 @@ yarn workspace typescript add parcel
 ```
 yarn workspace typescript add parcel
 ```
+
+## react
+
+```
+yarn workspace react add parcel
+```

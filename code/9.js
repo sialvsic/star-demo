@@ -1,3 +1,4 @@
+// 重点
 // 字符串出现的不重复最长长度
 
 var lengthOfLongestSubstring = function (s) {

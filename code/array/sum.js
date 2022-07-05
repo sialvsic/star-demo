@@ -10,7 +10,7 @@ function sum(array) {
     const element = array[index];
 
     if (typeof element === "number") {
-      num = element + num;
+      num += element;
     } else {
       num += sum(element);
     }

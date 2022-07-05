@@ -1,46 +1,50 @@
+//重要
 const fucArr = [
-  next => {
+  (next) => {
     setTimeout(() => {
       console.log(1);
-      next()
-    }, 300)
+      next();
+    }, 3000);
   },
-  next => {
+  (next) => {
     setTimeout(() => {
       console.log(2);
-      next()
-    }, 200)
+      next();
+    }, 2000);
   },
-  next => {
+  (next) => {
     setTimeout(() => {
       console.log(3);
-      next()
-    }, 100)
-  }
+      next();
+    }, 1000);
+  },
 ];
 
-var run1 = arr => {
-  if(arr.length === 0) return;
+var run1 = (arr) => {
+  if (arr.length === 0) return;
   arr[0](() => {
-    run(arr.slice(1))
+    run1(arr.slice(1));
   });
 };
 
-var run = arr => {
+var run = (arr) => {
   const trigger = () => {
-    if(arr.length === 0) return;
+    if (arr.length === 0) return;
     arr.shift()();
   };
-  arr = arr.map(val => {
+  arr = arr.map((val) => {
     return () => val(trigger);
   });
   trigger();
 };
 
-
-var run3 = arr => {
+var run3 = (arr) => {
   // var reduceResult = arr.reduce((pre, next) => (...args) => pre(next(...args))); //错误
-  let reduceResult = arr.reduce((pre, next) => (...args) => pre(() => next(...args)));
+  let reduceResult = arr.reduce(
+    (pre, next) =>
+      (...args) =>
+        pre(() => next(...args))
+  );
   return reduceResult(() => {});
 };
 

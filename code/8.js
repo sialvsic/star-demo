@@ -3,6 +3,7 @@
 function findMostWord(article) {
   // 合法性判断
   if (!article) return;
+
   // 参数处理
   article = article.trim().toLowerCase();
   let wordList = article.match(/[a-z]+/g),

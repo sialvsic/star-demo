@@ -8,7 +8,7 @@ const addSquare = flow([add, square])
 输出：
 */
 
-const _ = require('lodash');
+const _ = require("lodash");
 
 function add() {
   // let args = Array.prototype.slice.call(arguments);
@@ -25,7 +25,7 @@ function square(n) {
 function flow(fns) {
   let fnl = fns.reverse();
   return fnl.reduce((a, b) => {
-    return function(...args) {
+    return function (...args) {
       return a(b(...args));
     };
   });
@@ -35,7 +35,7 @@ function flow_args(fns) {
   let args = Array.prototype.slice.call(arguments);
   let fnl = args.reverse();
   return fnl.reduce((a, b) => {
-    return function(...args) {
+    return function (...args) {
       return a(b(...args));
     };
   });
@@ -44,7 +44,7 @@ function flow_args(fns) {
 function flow_2(fns) {
   const length = fns ? fns.length : 0;
 
-  return function() {
+  return function () {
     let args = Array.prototype.slice.call(arguments);
     let index = 0;
 
@@ -57,7 +57,7 @@ function flow_2(fns) {
 }
 
 // const fn_lodash = _.flow([add, square]);
-const fn = flow([add, add, square]);
+const fn = flow([add, square]);
 const fn_2 = flow_2([add, add, square]);
 const fn_lodash = _.flow([add, add, square]);
 const fn_args = flow_args(add, add, square);
@@ -66,5 +66,3 @@ console.log(fn(1, 2, 3));
 console.log(fn_2(1, 2, 3));
 console.log(fn_lodash(1, 2, 3));
 console.log(fn_args(1, 2, 3));
-
-

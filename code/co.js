@@ -1,5 +1,4 @@
 //co的实现
-
 function run(fn, ...args) {
   return new Promise((resolve, reject) => {
     let it;

@@ -15,4 +15,4 @@ Array.prototype._filter = function (fn) {
 
 const arr = [1, 2, 3, 4, 4, 5];
 
-console.log(arr.filter((item) => item === 4));
+console.log(arr._filter((item) => item === 4));

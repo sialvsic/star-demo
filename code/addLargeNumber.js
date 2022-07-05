@@ -1,10 +1,11 @@
+// 重点
 // 大数计算
 
 function addLargeNumber(a, b) {
   let i = a.length - 1;
   let j = b.length - 1;
   let carry = 0;
-  let result = '';
+  let result = "";
 
   while (i >= 0 || j >= 0) {
     let x = 0;
@@ -12,12 +13,12 @@ function addLargeNumber(a, b) {
     let sum;
 
     if (i >= 0) {
-      x = a[i] - '0';
+      x = a[i] - "0";
       i--;
     }
 
     if (j >= 0) {
-      y = b[j] - '0';
+      y = b[j] - "0";
       j--;
     }
 
@@ -43,6 +44,6 @@ function addLargeNumber(a, b) {
   return +result;
 }
 
-console.log(addLargeNumber('999', '1') === 1000);
-console.log(addLargeNumber('1', '999') === 1000);
-console.log(addLargeNumber('123', '321') === 444);
+console.log(addLargeNumber("999", "1") === 1000);
+console.log(addLargeNumber("1", "999") === 1000);
+console.log(addLargeNumber("123", "321") === 444);

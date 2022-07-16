@@ -1,5 +1,5 @@
 /*
-深入优先遍历 
+深度优先遍历 
 二叉树
 */
 
@@ -72,13 +72,13 @@ const tree = {
 function dfs(tree) {
   const value = [];
   function travel(node) {
-    value.push(node.value); // 前序遍历 根左右
+    // value.push(node.value); // 前序遍历 根左右
 
     if (node.left) {
       travel(node.left);
     }
 
-    // value.push(node.value); 中序遍历 左根右
+    value.push(node.value); //中序遍历 左根右
 
     if (node.right) {
       travel(node.right);

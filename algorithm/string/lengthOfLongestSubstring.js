@@ -1,5 +1,4 @@
-// 字符串出现的不重复最长长度
-
+// 字符串出现的不重复最长长度(无重复字符的最长子串)
 var lengthOfLongestSubstring = function (s) {
   let map = new Map();
   let i = -1;

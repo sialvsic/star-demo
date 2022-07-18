@@ -39,10 +39,12 @@ function isSymmetricalTree(node1, node2) {
   if (!node1 && !node2) {
     return true;
   }
+
   //判断两个节点是否存在一个为空
   if (!node1 || !node2) {
     return false;
   }
+
   //判断两个节点是否相同
   if (node1.val != node2.val) {
     return false;

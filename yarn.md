@@ -1,6 +1,12 @@
 ## 全局
+
 ```sh
 yarn add -W typescript
+yarn add -W koa
+yarn add -W @koa/cors
+yarn add -W koa-bodyparser
+
+yarn add -W -D @types/koa @types/koa-bodyparser @types/koa__cors @types/node nodemon tslib ts-node
 ```
 
 
@@ -33,6 +39,8 @@ yarn workspace libs add antd
 yarn workspace libs add puppeteer
 yarn workspace libs add lodash
 yarn workspace libs add @types/lodash -D
+yarn workspace libs add ejs
+yarn workspace libs add @types/ejs -D
 ```
 
 ## https
@@ -50,7 +58,7 @@ yarn workspace typescript add parcel
 ## css
 
 ```
-yarn workspace typescript add parcel
+yarn workspace css add parcel
 ```
 
 ## react

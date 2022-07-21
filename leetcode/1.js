@@ -12,9 +12,20 @@ const nums = [2, 7, 11, 15];
 const target = 9;
 
 var twoSum = function (nums, target) {
-  const arr = [];
+  const map = new Map();
+  const length = nums.length;
 
-  return arr;
+  for (let index = 0; index < length; index++) {
+    const item = nums[index];
+    const diff = target - item;
+
+    if (map.has(diff)) {
+      const _index = map.get(diff);
+      return [index, _index];
+    }
+
+    map.set(item, index);
+  }
 };
 
 const r = twoSum(nums, target);

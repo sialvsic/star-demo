@@ -52,7 +52,11 @@
                   class="es-m-p0r es-m-p20b"
                   valign="top"
                   align="center"
-                  style="padding-left: 73px; padding-right: 153px"
+                  style="
+                    padding-left: 73px;
+                    padding-right: 153px;
+                    padding-bottom: 36px;
+                  "
                 >
                   <table
                     width="100%"
@@ -136,8 +140,9 @@
                                           "
                                           href="https://baidu.com"
                                           target="_blank"
-                                          >ProjectTitle1</a
                                         >
+                                          <%= item.title %>
+                                        </a>
                                       </td>
                                     </tr>
                                     <tr>
@@ -152,13 +157,12 @@
                                           padding-bottom: 6px;
                                         "
                                       >
-                                        Redefining the social token paradigm via
-                                        true collective ownership and the
-                                        invention of 'quantum compounding'.
+                                        <%= item.desc %>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td style="line-height: 16px">
+                                        <% for (tag of item.tags) { %>
                                         <span
                                           style="
                                             line-height: 15px;
@@ -166,26 +170,9 @@
                                             color: #9d7145;
                                             font-size: 12px;
                                           "
-                                          >#web3</span
+                                          ><%= tag %></span
                                         >
-                                        <span
-                                          style="
-                                            line-height: 15px;
-                                            font-weight: 400;
-                                            color: #9d7145;
-                                            font-size: 12px;
-                                          "
-                                          >#blockchaingames</span
-                                        >
-                                        <span
-                                          style="
-                                            line-height: 15px;
-                                            font-weight: 400;
-                                            color: #9d7145;
-                                            font-size: 12px;
-                                          "
-                                          >#nft</span
-                                        >
+                                        <% } %>
                                       </td>
                                     </tr>
                                   </tbody>

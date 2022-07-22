@@ -77,16 +77,20 @@
               <div />
               <%- include('subTitle'); -%>
               <div />
-              <%-include('line'); -%>
+              <%- include('line'); -%>
               <div />
-              <%-include('projecttitle'); -%>
+              <%- include('projectList'); -%>
               <div />
-              <%-include('item'); -%>
-              <%-include('item'); -%>
+             
+              <% for (item of recommendList.list) { %>
+                 <%- include('item', { item: item }); -%>
+              <% } %>
               <div />
-              <%-include('line'); -%>
+             
               <div />
-              <%-include('footer'); -%>
+              <%- include('line'); -%>
+              <div />
+              <%- include('footer'); -%>
             </td>
           </tr>
         </tbody>

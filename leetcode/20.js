@@ -1,4 +1,4 @@
-// 有效的括号：https://leetcode.cn/problems/valid-parentheses/
+// 20. 有效的括号：https://leetcode.cn/problems/valid-parentheses/
 
 /*
 字符串是有括号组成，判断内容是否为有效内容

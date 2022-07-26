@@ -36,6 +36,6 @@ function judge(text) {
 }
 
 console.log(judge("()"));
-console.log(judge("({})"));
-console.log(judge("[()"));
-console.log(judge("[(])"));
+// console.log(judge("({})"));
+// console.log(judge("[()"));
+// console.log(judge("[(])"));

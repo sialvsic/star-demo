@@ -7,6 +7,7 @@
     "dev:html2canvas": "parcel ./_html2Canvas/test/index.html",
     "dev:lodash": "parcel ./_lodash/index.html",
     "dev:ejs": "nodemon ./_ejs/index.ts",
+    "dev:mail": "node ./_nodemail/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "ejs": "^3.1.8",
     "html2canvas": "^1.4.1",
     "lodash": "^4.17.21",
+    "nodemailer": "^6.7.7",
     "puppeteer": "^14.4.0"
   },
   "devDependencies": {

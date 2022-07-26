@@ -53,7 +53,7 @@ function render(
     // str => Rendered HTML string
 
     console.log("err", err);
-    // console.log("str", str);
+    console.log("str", str);
 
     ctx.response.body = str;
   });

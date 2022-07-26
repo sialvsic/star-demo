@@ -8,3 +8,4 @@ temp.png
 .parcel-cache/
 .DS_Store
 yarn-error.log
+.tmp

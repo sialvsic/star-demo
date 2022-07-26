@@ -2,12 +2,9 @@ const nodemailer = require("nodemailer");
 const fs = require("fs");
 const path = require("path");
 
-// const pathname = path.resolve(__dirname + "/index.html");
 const pathname = path.resolve(__dirname + "/mail.html");
-// const pathname = path.resolve(__dirname + "/stripo.html");
 const html = fs.readFileSync(pathname);
 
-// async..await is not allowed in global scope, must use a wrapper
 async function main() {
   // Generate test SMTP service account from ethereal.email
   // Only needed if you don't have a real mail account for testing

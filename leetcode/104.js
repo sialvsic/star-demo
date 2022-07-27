@@ -43,3 +43,6 @@ var maxDepth = function (root) {
 };
 
 const nums = [3, 9, 20, null, null, 15, 7];
+
+const r = maxDepth(nums);
+console.log("r", r);

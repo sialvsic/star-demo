@@ -32,5 +32,5 @@ var findDisappearedNumbers = function (nums) {
 };
 
 const nums = [4, 3, 2, 7, 8, 2, 3, 1];
-const r = findDisappearedNumbers2(nums); //
+const r = findDisappearedNumbers(nums); //
 console.log("r", r); //[5,6]

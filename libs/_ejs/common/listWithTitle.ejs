@@ -1,0 +1,86 @@
+<!-- 最外层 第四行  -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td
+      align="center"
+      width="100%"
+      style="padding-left: 10px; padding-right: 10px; padding-bottom: 22px"
+    >
+      <% if (list.title) { %>
+      <!-- 第一行盒子 -->
+      <table
+        class="es-content-body"
+        width="100%"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        style="width: 600px"
+      >
+        <tr>
+          <td
+            class="no-pd-left-right"
+            align="left"
+            style="
+              padding: 0;
+              margin: 0;
+              padding-top: 22px;
+              padding-left: 80px;
+              padding-right: 80px;
+            "
+          >
+            <!-- 行内第一个块 es-left -->
+            <table
+              cellspacing="0"
+              cellpadding="0"
+              role="presentation"
+              align="left"
+              style="
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                border-collapse: collapse;
+                border-spacing: 0px;
+              "
+            >
+              <tr>
+                <td align="left" style="padding: 0; margin: 0; width: 440px">
+                  <table
+                    width="100%"
+                    cellspacing="0"
+                    cellpadding="0"
+                    role="presentation"
+                    style="
+                      mso-table-lspace: 0pt;
+                      mso-table-rspace: 0pt;
+                      border-collapse: collapse;
+                      border-spacing: 0px;
+                    "
+                  >
+                    <tr>
+                      <td align="left" style="padding: 0; margin: 0">
+                        <h2
+                          style="
+                            margin: 0;
+                            font-size: 20px;
+                            line-height: 28px;
+                            font-weight: 400;
+                            color: #000000;
+                          "
+                        >
+                          <%= list.title; %>
+                        </h2>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <% } %>
+      <!-- 行 -->
+      <% for (item of list.list) { %> <%- include('item', { item: item }); -%>
+      <% } %>
+    </td>
+  </tr>
+</table>

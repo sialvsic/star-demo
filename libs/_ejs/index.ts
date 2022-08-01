@@ -1,8 +1,7 @@
 import Koa from "koa";
 import cors from "@koa/cors";
 import bodyParser from "koa-bodyparser";
-import ejs from "./ejs";
-import ejs1 from "./ejs1";
+import mail from "./mail";
 
 const PORT = process.env.PORT || 3001;
 const app = new Koa();
@@ -42,12 +41,7 @@ app.use(async (ctx, next) => {
 
 app.use(async (ctx, next) => {
   if (ctx.path === "/mail") {
-    ejs(ctx, next);
-    return;
-  }
-
-  if (ctx.path === "/temp") {
-    ejs1(ctx, next);
+    mail(ctx, next);
     return;
   }
 

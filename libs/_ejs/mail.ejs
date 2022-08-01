@@ -2,6 +2,7 @@
 <html
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:o="urn:schemas-microsoft-com:office:office"
+  style="font-family: arial, 'helvetica neue', helvetica, sans-serif"
 >
   <head>
     <meta charset="UTF-8" />
@@ -9,92 +10,144 @@
     <meta name="x-apple-disable-message-reformatting" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content="telephone=no" name="format-detection" />
-    <title></title>
-    <!--[if (mso 16)]>
-      <style type="text/css">
-        a {
-          text-decoration: none;
-        }
-      </style>
-    <![endif]-->
-    <!--[if gte mso 9
-      ]><style>
-        sup {
-          font-size: 100% !important;
-        }
-      </style><!
-    [endif]-->
-    <!--[if gte mso 9]>
-      <xml>
-        <o:OfficeDocumentSettings>
-          <o:AllowPNG></o:AllowPNG>
-          <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-      </xml>
-    <![endif]-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <title>mail</title>
     <style type="text/css">
+      #outlook a {
+        padding: 0;
+      } /* Force Outlook to provide a "view in browser" menu link. */
       body {
-        font-family: "Inter", sans-serif;
+        width: 100% !important;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
-        padding: 0;
         margin: 0;
+        padding: 0;
+      }
+      /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+      .ExternalClass {
+        width: 100%;
+      } /* Force Hotmail to display emails at full width */
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      } /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+      #backgroundTable {
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+        line-height: 100% !important;
+      }
+      /* End reset */
+
+      /* mobile first */
+      @media only screen and (max-width: 600px) {
+        .no-pd-left-right {
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+
+        .no-pd {
+          padding: 0 !important;
+        }
+
+        .pt-10 {
+          padding-top: 10px !important;
+        }
+
+        .img-80 {
+          width: 80px !important;
+        }
+
+        .es-header-body a {
+          font-size: 20px !important;
+        }
+
+        .es-content-body h1 {
+          font-size: 24px !important;
+          line-height: 36px !important;
+        }
+
+        .es-content-body .w-210 {
+          width: 210px !important;
+          padding-left: 10px !important;
+        }
+
+        table.es-header-body,
+        table.es-content-body,
+        table.es-footer-body {
+          width: 100% !important;
+        }
+      }
+
+      p,
+      h1,
+      h2 {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
       }
     </style>
   </head>
-  <body>
-    <div class="es-wrapper-color" style="background-color: #f6f6f6">
-      <table
-        class="es-wrapper"
-        width="100%"
-        cellspacing="0"
-        cellpadding="0"
-        style="
-          mso-table-lspace: 0pt;
-          mso-table-rspace: 0pt;
-          border-collapse: collapse;
-          border-spacing: 0px;
-          padding: 0;
-          margin: 0;
-          width: 100%;
-          height: 100%;
-          background-repeat: repeat;
-          background-position: center top;
-        "
-      >
-        <tbody>
-          <tr>
-            <td class="esd-email-paddings" valign="top">
-              <%- include('header'); -%>
-              <div />
-              <%- include('title'); -%>
-              <div />
-              <%- include('subTitle'); -%>
-              <div />
-              <%- include('line'); -%>
-              <div />
-              <%- include('projectList'); -%>
-              <div />
-             
-              <% for (item of recommendList.list) { %>
-                 <%- include('item', { item: item }); -%>
-              <% } %>
-              <div />
-             
-              <div />
-              <%- include('line'); -%>
-              <div />
-              <%- include('footer'); -%>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <body
+    style="
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+    "
+  >
+    <!-- 最外层 table 布局 -->
+    <table
+      role="presentation"
+      width="100%"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      align="center"
+    >
+      <tr>
+        <td class="main" style="display: block; margin: 0 auto" valign="top">
+          <!-- header -->
+          <%- include('./common/header'); -%>
+          <!-- title -->
+          <%- include('./common/title'); -%>
+          <!-- subTitle -->
+          <%- include('./common/subTitle'); -%>
+          <!-- line -->
+          <%- include('./common/line'); -%>
+          <!-- list -->
+          <%- include('./common/listWithTitle', { list: newList }); -%>
+          <!-- line -->
+          <%- include('./common/line'); -%>
+          <!-- title -->
+          <%- include('./common/listWithTitle', { list: trendList }); -%>
+          <!-- list -->
+          <%- include('./common/messageList', { list: messageList }); -%>
+          <!-- button -->
+          <%-include('./common/button', { item: button }); -%>
+          <!-- line -->
+          <%- include('./common/line'); -%>
+          <!-- footer -->
+          <%- include('./common/footer'); -%>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>

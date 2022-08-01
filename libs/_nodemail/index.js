@@ -30,7 +30,7 @@ async function main() {
     port: "587",
     secureConnection: true,
     secure: false, // true for 465, false for other ports
-    auth: { user: "sialvsic@outlook.com", pass: "xxx" },
+    auth: { user: "sialvsic@outlook.com", pass: "qteoalbfntewmkhs" },
   });
 
   // send mail with defined transport object

@@ -44,8 +44,9 @@
 
       /* mobile first */
       @media only screen and (max-width: 600px) {
-        .no-pd-left {
+        .no-pd-left-right {
           padding-left: 0px !important;
+          padding-right: 0px !important;
         }
 
         .no-pd {
@@ -56,6 +57,10 @@
           padding-top: 10px !important;
         }
 
+        .img-80 {
+          width: 80px !important;
+        }
+
         .es-header-body a {
           font-size: 20px !important;
         }
@@ -63,6 +68,17 @@
         .es-content-body h1 {
           font-size: 24px !important;
           line-height: 36px !important;
+        }
+
+        .es-content-body .w-210 {
+          width: 210px !important;
+          padding-left: 10px !important;
+        }
+
+        table.es-header-body,
+        table.es-content-body,
+        table.es-footer-body {
+          width: 100% !important;
         }
       }
 
@@ -91,7 +107,7 @@
       width: 100%;
       margin: 0;
       padding: 0;
-      background-color: #f2f0ea;
+      background-color: #ffffff;
       -ms-text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
       -webkit-font-smoothing: antialiased;
@@ -108,6 +124,7 @@
     >
       <tr>
         <td class="main" style="display: block; margin: 0 auto" valign="top">
+          <!-- header -->
           <!-- 最外层 第一行  -->
           <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
@@ -127,9 +144,14 @@
                 >
                   <tr>
                     <td
-                      class="no-pd-left"
+                      class="no-pd-left-right"
                       align="left"
-                      style="padding: 0; margin: 0; padding-left: 40px"
+                      style="
+                        padding: 0;
+                        margin: 0;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                      "
                     >
                       <!-- 行内第一个块 es-left -->
                       <table
@@ -172,13 +194,14 @@
                                   "
                                 >
                                   <a
-                                    href="https://www.baidu.com"
+                                    href="https://www.metajam.studio"
                                     target="_blank"
                                     style="
                                       margin: 0;
                                       line-height: 24px;
                                       color: #d8543c;
                                       font-size: 20px;
+                                      text-decoration: none;
                                     "
                                   >
                                     MetaJam
@@ -195,6 +218,7 @@
               </td>
             </tr>
           </table>
+          <!-- title -->
           <!-- 最外层 第二行  -->
           <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
@@ -214,9 +238,14 @@
                 >
                   <tr>
                     <td
-                      class="no-pd-left"
+                      class="no-pd-left-right"
                       align="left"
-                      style="padding: 0; margin: 0; padding-left: 80px"
+                      style="
+                        padding: 0;
+                        margin: 0;
+                        padding-left: 80px;
+                        padding-right: 80px;
+                      "
                     >
                       <!-- 行内第一个块 es-left -->
                       <table
@@ -266,6 +295,7 @@
               </td>
             </tr>
           </table>
+          <!-- subTitle -->
           <!-- 最外层 第三行  -->
           <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
@@ -285,12 +315,13 @@
                 >
                   <tr>
                     <td
-                      class="no-pd-left"
+                      class="no-pd-left-right"
                       align="left"
                       style="
                         padding: 0;
                         margin: 0;
                         padding-left: 80px;
+                        padding-right: 80px;
                         padding-bottom: 40px;
                       "
                     >
@@ -366,8 +397,12 @@
                                         "
                                       >
                                         <img
-                                          src="https://alvinzhoutest.cn/open/storage/%E7%AB%8B%E7%BB%98_%E8%80%80%E9%AA%91%E5%A3%AB%E4%B8%B4%E5%85%89_1-min.png"
-                                          style="width: 24px; height: 24px"
+                                          src="https://cdn.himalaya.com/e8db113534f4478585f51d768bc36190.png?x-oss-process=image/resize,w_300,h_300&amp;auth_key=4102416000-1234-0-3fe5f7f39d02f9a4dde92a3f35555e23"
+                                          style="
+                                            width: 24px;
+                                            height: 24px;
+                                            border-radius: 50%;
+                                          "
                                           alt=""
                                         />
                                       </td>
@@ -382,7 +417,7 @@
                                           color: #000000;
                                         "
                                       >
-                                        user name
+                                        username 111,
                                       </td>
                                     </tr>
                                   </table>
@@ -436,6 +471,7 @@
               </td>
             </tr>
           </table>
+          <!-- line -->
           <!-- 分割线 -->
           <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
@@ -498,6 +534,7 @@
               </td>
             </tr>
           </table>
+          <!-- list -->
           <!-- 最外层 第四行  -->
           <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
@@ -507,7 +544,6 @@
                 style="
                   padding-left: 10px;
                   padding-right: 10px;
-                  padding-top: 22px;
                   padding-bottom: 22px;
                 "
               >
@@ -522,9 +558,15 @@
                 >
                   <tr>
                     <td
-                      class="no-pd-left"
+                      class="no-pd-left-right"
                       align="left"
-                      style="padding: 0; margin: 0; padding-left: 80px"
+                      style="
+                        padding: 0;
+                        margin: 0;
+                        padding-top: 22px;
+                        padding-left: 80px;
+                        padding-right: 80px;
+                      "
                     >
                       <!-- 行内第一个块 es-left -->
                       <table
@@ -578,7 +620,8 @@
                     </td>
                   </tr>
                 </table>
-                <!-- 第二行盒子 -->
+
+                <!-- 行 -->
                 <table
                   class="es-content-body"
                   width="100%"
@@ -589,13 +632,14 @@
                 >
                   <tr>
                     <td
-                      class="no-pd-left"
+                      class="no-pd-left-right"
                       align="left"
                       style="
                         padding: 0;
                         margin: 0;
                         padding-left: 80px;
                         padding-top: 36px;
+                        padding-right: 80px;
                       "
                     >
                       <!-- 行内第一个块 es-left -->
@@ -614,6 +658,7 @@
                         <tr>
                           <td
                             align="left"
+                            class="img-80"
                             style="padding: 0; margin: 0; width: 96px"
                           >
                             <table
@@ -631,9 +676,11 @@
                               <tr>
                                 <td align="left" style="padding: 0; margin: 0">
                                   <img
-                                    src="https://alvinzhoutest.cn/blog/Item 1@2x.png"
+                                    class="img-80"
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
                                     alt=""
                                     width="96"
+                                    style="border-radius: 10px"
                                   />
                                 </td>
                               </tr>
@@ -656,6 +703,7 @@
                       >
                         <tr>
                           <td
+                            class="w-210"
                             align="left"
                             style="
                               padding: 0;
@@ -677,7 +725,14 @@
                               "
                             >
                               <tr>
-                                <td align="left" style="padding: 0; margin: 0">
+                                <td
+                                  align="left"
+                                  style="
+                                    padding: 0;
+                                    margin: 0;
+                                    padding-bottom: 6px;
+                                  "
+                                >
                                   <a
                                     style="
                                       padding: 0;
@@ -686,13 +741,12 @@
                                       font-weight: 700;
                                       color: #000000;
                                       font-size: 18px;
-                                      padding-bottom: 6px;
                                       text-decoration: none;
                                     "
-                                    href="https://baidu.com"
+                                    href=""
                                     target="_blank"
                                   >
-                                    <%= item.title %>
+                                    ProjectTitle1
                                   </a>
                                 </td>
                               </tr>
@@ -709,7 +763,9 @@
                                       padding-bottom: 6px;
                                     "
                                   >
-                                    <%= item.desc %>
+                                    Redefining the social token paradigm via
+                                    true collective ownership and the invention
+                                    of &#39;quantum compounding&#39;.
                                   </p>
                                 </td>
                               </tr>
@@ -722,7 +778,27 @@
                                       color: #9d7145;
                                       font-size: 12px;
                                     "
-                                    ><%= tag %></span
+                                    >#web3</span
+                                  >
+
+                                  <span
+                                    style="
+                                      line-height: 15px;
+                                      font-weight: 400;
+                                      color: #9d7145;
+                                      font-size: 12px;
+                                    "
+                                    >#blockchaingames</span
+                                  >
+
+                                  <span
+                                    style="
+                                      line-height: 15px;
+                                      font-weight: 400;
+                                      color: #9d7145;
+                                      font-size: 12px;
+                                    "
+                                    >#fnt</span
                                   >
                                 </td>
                               </tr>
@@ -733,7 +809,6 @@
                     </td>
                   </tr>
                 </table>
-                <!-- 第二行盒子 -->
                 <table
                   class="es-content-body"
                   width="100%"
@@ -744,13 +819,14 @@
                 >
                   <tr>
                     <td
-                      class="no-pd-left"
+                      class="no-pd-left-right"
                       align="left"
                       style="
                         padding: 0;
                         margin: 0;
                         padding-left: 80px;
                         padding-top: 36px;
+                        padding-right: 80px;
                       "
                     >
                       <!-- 行内第一个块 es-left -->
@@ -769,6 +845,7 @@
                         <tr>
                           <td
                             align="left"
+                            class="img-80"
                             style="padding: 0; margin: 0; width: 96px"
                           >
                             <table
@@ -786,9 +863,11 @@
                               <tr>
                                 <td align="left" style="padding: 0; margin: 0">
                                   <img
-                                    src="https://alvinzhoutest.cn/blog/Item 1@2x.png"
+                                    class="img-80"
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
                                     alt=""
                                     width="96"
+                                    style="border-radius: 10px"
                                   />
                                 </td>
                               </tr>
@@ -811,6 +890,7 @@
                       >
                         <tr>
                           <td
+                            class="w-210"
                             align="left"
                             style="
                               padding: 0;
@@ -832,7 +912,14 @@
                               "
                             >
                               <tr>
-                                <td align="left" style="padding: 0; margin: 0">
+                                <td
+                                  align="left"
+                                  style="
+                                    padding: 0;
+                                    margin: 0;
+                                    padding-bottom: 6px;
+                                  "
+                                >
                                   <a
                                     style="
                                       padding: 0;
@@ -841,13 +928,12 @@
                                       font-weight: 700;
                                       color: #000000;
                                       font-size: 18px;
-                                      padding-bottom: 6px;
                                       text-decoration: none;
                                     "
-                                    href="https://baidu.com"
+                                    href=""
                                     target="_blank"
                                   >
-                                    <%= item.title %>
+                                    ProjectTitle2
                                   </a>
                                 </td>
                               </tr>
@@ -864,7 +950,9 @@
                                       padding-bottom: 6px;
                                     "
                                   >
-                                    <%= item.desc %>
+                                    Redefining the social token paradigm via
+                                    true collective ownership and the invention
+                                    of &#39;quantum compounding&#39;.
                                   </p>
                                 </td>
                               </tr>
@@ -877,7 +965,27 @@
                                       color: #9d7145;
                                       font-size: 12px;
                                     "
-                                    ><%= tag %></span
+                                    >#web3</span
+                                  >
+
+                                  <span
+                                    style="
+                                      line-height: 15px;
+                                      font-weight: 400;
+                                      color: #9d7145;
+                                      font-size: 12px;
+                                    "
+                                    >#blockchaingames</span
+                                  >
+
+                                  <span
+                                    style="
+                                      line-height: 15px;
+                                      font-weight: 400;
+                                      color: #9d7145;
+                                      font-size: 12px;
+                                    "
+                                    >#fnt</span
                                   >
                                 </td>
                               </tr>
@@ -891,6 +999,7 @@
               </td>
             </tr>
           </table>
+          <!-- line -->
           <!-- 分割线 -->
           <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
@@ -953,7 +1062,8 @@
               </td>
             </tr>
           </table>
-          <!-- 最外层 第五行 -->
+          <!-- title -->
+          <!-- 最外层 第四行  -->
           <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td
@@ -962,7 +1072,6 @@
                 style="
                   padding-left: 10px;
                   padding-right: 10px;
-                  padding-top: 22px;
                   padding-bottom: 22px;
                 "
               >
@@ -977,9 +1086,15 @@
                 >
                   <tr>
                     <td
-                      class="no-pd-left"
+                      class="no-pd-left-right"
                       align="left"
-                      style="padding: 0; margin: 0; padding-left: 80px"
+                      style="
+                        padding: 0;
+                        margin: 0;
+                        padding-top: 22px;
+                        padding-left: 80px;
+                        padding-right: 80px;
+                      "
                     >
                       <!-- 行内第一个块 es-left -->
                       <table
@@ -1033,6 +1148,212 @@
                     </td>
                   </tr>
                 </table>
+
+                <!-- 行 -->
+                <table
+                  class="es-content-body"
+                  width="100%"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="width: 600px"
+                >
+                  <tr>
+                    <td
+                      class="no-pd-left-right"
+                      align="left"
+                      style="
+                        padding: 0;
+                        margin: 0;
+                        padding-left: 80px;
+                        padding-top: 36px;
+                        padding-right: 80px;
+                      "
+                    >
+                      <!-- 行内第一个块 es-left -->
+                      <table
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                        align="left"
+                        style="
+                          mso-table-lspace: 0pt;
+                          mso-table-rspace: 0pt;
+                          border-collapse: collapse;
+                          border-spacing: 0px;
+                        "
+                      >
+                        <tr>
+                          <td
+                            align="left"
+                            class="img-80"
+                            style="padding: 0; margin: 0; width: 96px"
+                          >
+                            <table
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                border-collapse: collapse;
+                                border-spacing: 0px;
+                              "
+                            >
+                              <tr>
+                                <td align="left" style="padding: 0; margin: 0">
+                                  <img
+                                    class="img-80"
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
+                                    alt=""
+                                    width="96"
+                                    style="border-radius: 10px"
+                                  />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- 行内第二个块 es-right -->
+                      <table
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                        align="left"
+                        style="
+                          mso-table-lspace: 0pt;
+                          mso-table-rspace: 0pt;
+                          border-collapse: collapse;
+                          border-spacing: 0px;
+                        "
+                      >
+                        <tr>
+                          <td
+                            class="w-210"
+                            align="left"
+                            style="
+                              padding: 0;
+                              margin: 0;
+                              width: 252px;
+                              padding-left: 20px;
+                            "
+                          >
+                            <table
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                border-collapse: collapse;
+                                border-spacing: 0px;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  align="left"
+                                  style="
+                                    padding: 0;
+                                    margin: 0;
+                                    padding-bottom: 6px;
+                                  "
+                                >
+                                  <a
+                                    style="
+                                      padding: 0;
+                                      margin: 0;
+                                      line-height: 22px;
+                                      font-weight: 700;
+                                      color: #000000;
+                                      font-size: 18px;
+                                      text-decoration: none;
+                                    "
+                                    href=""
+                                    target="_blank"
+                                  >
+                                    ProjectTitle1
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="padding: 0; margin: 0">
+                                  <p
+                                    style="
+                                      padding: 0;
+                                      margin: 0;
+                                      line-height: 17px;
+                                      font-weight: 400;
+                                      color: #515759;
+                                      font-size: 14px;
+                                      padding-bottom: 6px;
+                                    "
+                                  >
+                                    Redefining the social token paradigm via
+                                    true collective ownership and the invention
+                                    of &#39;quantum compounding&#39;.
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="line-height: 16px">
+                                  <span
+                                    style="
+                                      line-height: 15px;
+                                      font-weight: 400;
+                                      color: #9d7145;
+                                      font-size: 12px;
+                                    "
+                                    >#web3</span
+                                  >
+
+                                  <span
+                                    style="
+                                      line-height: 15px;
+                                      font-weight: 400;
+                                      color: #9d7145;
+                                      font-size: 12px;
+                                    "
+                                    >#blockchaingames</span
+                                  >
+
+                                  <span
+                                    style="
+                                      line-height: 15px;
+                                      font-weight: 400;
+                                      color: #9d7145;
+                                      font-size: 12px;
+                                    "
+                                    >#fnt</span
+                                  >
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- list -->
+          <!-- 最外层 第五行 -->
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td
+                align="center"
+                width="100%"
+                style="
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  padding-top: 22px;
+                  padding-bottom: 22px;
+                "
+              >
                 <!-- 第二行盒子 -->
                 <table
                   class="es-content-body"
@@ -1044,7 +1365,7 @@
                 >
                   <tr>
                     <td
-                      class="no-pd-left"
+                      class="no-pd-left-right"
                       align="left"
                       style="
                         padding: 0;
@@ -1053,7 +1374,10 @@
                         padding-top: 36px;
                       "
                     >
-                      <!-- 行内第二个块 es-left -->
+                      <!-- 行 -->
+
+                      <!-- type1 -->
+                      <!-- 消息类型1 -->
                       <table
                         cellspacing="0"
                         cellpadding="0"
@@ -1085,49 +1409,103 @@
                             >
                               <tr>
                                 <td align="left" style="padding: 0; margin: 0">
-                                  <a
+                                  <p
                                     style="
                                       padding: 0;
                                       margin: 0;
                                       line-height: 22px;
-                                      font-weight: 700;
+                                      font-weight: 400;
                                       color: #000000;
                                       font-size: 18px;
-                                      padding-bottom: 6px;
+                                      padding-bottom: 8px;
                                       text-decoration: none;
                                     "
-                                    href="https://baidu.com"
-                                    target="_blank"
                                   >
-                                    <%= item.title %>
-                                  </a>
+                                    <span style="font-weight: 700">2&nbsp;</span
+                                    >people submitted the Quest
+                                    <span style="font-weight: 700"
+                                      >ProjectTitle1111</span
+                                    >
+                                  </p>
                                 </td>
                               </tr>
                               <tr>
                                 <td align="left" style="padding: 0; margin: 0">
                                   <img
-                                    src="https://alvinzhoutest.cn/open/storage/mega-hackathon.jpg"
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
                                     style="
-                                      width: 24px;
-                                      height: 24px;
+                                      width: 36px;
+                                      height: 36px;
                                       border-radius: 50%;
                                     "
                                     alt=""
                                   />
+
                                   <img
-                                    src="https://alvinzhoutest.cn/open/storage/mega-hackathon.jpg"
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
                                     style="
-                                      width: 24px;
-                                      height: 24px;
+                                      width: 36px;
+                                      height: 36px;
                                       border-radius: 50%;
                                     "
                                     alt=""
                                   />
+
                                   <img
-                                    src="https://alvinzhoutest.cn/open/storage/mega-hackathon.jpg"
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
                                     style="
-                                      width: 24px;
-                                      height: 24px;
+                                      width: 36px;
+                                      height: 36px;
+                                      border-radius: 50%;
+                                    "
+                                    alt=""
+                                  />
+
+                                  <img
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
+                                    style="
+                                      width: 36px;
+                                      height: 36px;
+                                      border-radius: 50%;
+                                    "
+                                    alt=""
+                                  />
+
+                                  <img
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
+                                    style="
+                                      width: 36px;
+                                      height: 36px;
+                                      border-radius: 50%;
+                                    "
+                                    alt=""
+                                  />
+
+                                  <img
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
+                                    style="
+                                      width: 36px;
+                                      height: 36px;
+                                      border-radius: 50%;
+                                    "
+                                    alt=""
+                                  />
+
+                                  <img
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
+                                    style="
+                                      width: 36px;
+                                      height: 36px;
+                                      border-radius: 50%;
+                                    "
+                                    alt=""
+                                  />
+
+                                  <img
+                                    src="https://cdn.himalaya.com/f02ffb7c1a5a41bbbf115b4a3963b1d7.jpg?x-oss-process=image%2Fformat%2Cwebp&amp;auth_key=4102416000-1234-0-d525a4fb586509cd80eaffc8c3730d6e"
+                                    style="
+                                      width: 36px;
+                                      height: 36px;
                                       border-radius: 50%;
                                     "
                                     alt=""
@@ -1138,7 +1516,7 @@
                           </td>
                         </tr>
                       </table>
-                      <!-- 行内第一个块 es-right -->
+                      <!-- 行内块 es-right -->
                       <table
                         cellspacing="0"
                         cellpadding="0"
@@ -1176,10 +1554,100 @@
                               <tr>
                                 <td align="left" style="padding: 0; margin: 0">
                                   <img
-                                    src="https://alvinzhoutest.cn/blog/Item 1@2x.png"
+                                    src="https://alvinzhoutest.cn/blog/Item%201@2x.png"
                                     alt=""
                                     width="96"
                                   />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <!-- type1 -->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- button -->
+          <!-- Button -->
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td
+                align="center"
+                width="100%"
+                style="
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  padding-bottom: 22px;
+                "
+              >
+                <!-- 第一行盒子 -->
+                <table
+                  class="es-content-body"
+                  width="100%"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="width: 600px"
+                >
+                  <tr>
+                    <td align="center" style="padding: 0; margin: 0">
+                      <!-- 行内第一个块 es-left -->
+                      <table
+                        cellspacing="0"
+                        cellpadding="0"
+                        role="presentation"
+                        align="center"
+                        style="
+                          mso-table-lspace: 0pt;
+                          mso-table-rspace: 0pt;
+                          border-collapse: collapse;
+                          border-spacing: 0px;
+                        "
+                      >
+                        <tr>
+                          <td align="center" style="padding: 0; margin: 0">
+                            <table
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              role="presentation"
+                              style="
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                                border-collapse: collapse;
+                                border-spacing: 0px;
+                              "
+                            >
+                              <tr>
+                                <td
+                                  align="center"
+                                  style="padding: 0; margin: 0"
+                                >
+                                  <a
+                                    href="https://www.baidu.com"
+                                    target="_blank"
+                                    style="
+                                      border-radius: 10px;
+                                      box-sizing: border-box;
+                                      cursor: pointer;
+                                      display: inline-block;
+                                      font-size: 16px;
+                                      font-weight: 600;
+                                      line-height: 22px;
+                                      margin: 0;
+                                      padding: 8px 16px;
+                                      text-decoration: none;
+                                      background-color: #d8543c;
+                                      color: #ffffff;
+                                    "
+                                  >
+                                    View more
+                                  </a>
                                 </td>
                               </tr>
                             </table>
@@ -1192,6 +1660,7 @@
               </td>
             </tr>
           </table>
+          <!-- line -->
           <!-- 分割线 -->
           <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
@@ -1255,6 +1724,7 @@
             </tr>
           </table>
           <!-- footer -->
+          <!-- footer -->
           <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
               <td
@@ -1269,7 +1739,7 @@
               >
                 <!-- 第一行盒子 -->
                 <table
-                  class="es-header-footer"
+                  class="es-footer-body"
                   width="100%"
                   border="0"
                   cellpadding="0"
@@ -1277,7 +1747,6 @@
                   style="width: 600px"
                 >
                   <!-- 第1行 -->
-
                   <tr>
                     <td align="left" style="padding: 0; margin: 0">
                       <table cellspacing="0" cellpadding="0" align="center">
@@ -1285,7 +1754,7 @@
                           <td align="center">
                             <a
                               target="_blank"
-                              href=""
+                              href="https://discord.gg/wXtj2UuedP"
                               style="padding-right: 4px"
                               ><img
                                 title="Discord"
@@ -1295,7 +1764,10 @@
                             /></a>
                           </td>
                           <td align="center">
-                            <a target="_blank" href="" style="padding-left: 4px"
+                            <a
+                              target="_blank"
+                              href="https://twitter.com/MetaJamStudio"
+                              style="padding-left: 4px"
                               ><img
                                 title="Twitter"
                                 src="https://storageapi.fleek.co/e193aa55-4163-4feb-8aef-60338f66c655-bucket/metajam/avatar-f2fead0bc61afefa779472e8d0b3bee3.png"
@@ -1337,6 +1809,7 @@
                           <td align="center">
                             <p
                               style="
+                                margin: 0;
                                 margin-bottom: 10px;
                                 -webkit-text-size-adjust: none;
                                 -ms-text-size-adjust: none;
@@ -1362,12 +1835,13 @@
                           <td align="center">
                             <p
                               style="
+                                margin: 0;
                                 margin-bottom: 10px;
                                 -webkit-text-size-adjust: none;
                                 -ms-text-size-adjust: none;
                                 mso-line-height-rule: exactly;
                                 font-weight: 400;
-                                line-height: 22px;
+                                line-height: 16px;
                                 color: rgba(51, 51, 51, 0.5);
                                 font-size: 12px;
                               "
@@ -1395,7 +1869,7 @@
                           >
                             <a
                               target="_blank"
-                              href="https://"
+                              href="https://www.metajam.studio/"
                               style="
                                 color: #515759;
                                 text-decoration: none;
@@ -1416,7 +1890,7 @@
                             >
                             <a
                               target="_blank"
-                              href="https://"
+                              href="https://mirror.xyz/m7e.eth"
                               style="color: #515759; text-decoration: none"
                               >Blog</a
                             >
@@ -1432,7 +1906,7 @@
                             >
                             <a
                               target="_blank"
-                              href="https://"
+                              href="mailto:contact@metajam.studio"
                               style="color: #515759; text-decoration: none"
                               >Contact Us</a
                             >
@@ -1448,7 +1922,7 @@
                             >
                             <a
                               target="_blank"
-                              href="https://"
+                              href="https://daox.notion.site/Job-Board-Open-Positions-c7ef14fc84594b9f812e82c7552c3a1b"
                               style="color: #515759; text-decoration: none"
                               >Join Us</a
                             >

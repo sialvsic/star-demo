@@ -4,54 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid</title>
+    <title>Grid 三栏布局</title>
     <style>
-      .wrapper {
-        margin: 60px;
-        /* 声明一个容器 */
-        display: grid;
-        /*  声明列的宽度  */
-        grid-template-columns: 300px;
-        /* grid-template-columns: repeat(3, 200px); */
-        /*  声明行间距和列间距  */
-        grid-gap: 20px;
-        /*  声明行的高度  */
-        grid-template-rows: 100px 100px 100px;
-        /* grid-template-rows: 100px 200px; */
-      }
-      .one {
-        background: #19caad;
-      }
-      .two {
-        background: #8cc7b5;
-      }
-      .three {
-        background: #d1ba74;
-      }
-      .four {
-        background: #bee7e9;
-      }
-      .five {
-        background: #e6ceac;
-      }
-      .six {
-        background: #ecad9e;
-      }
-      .item {
+      body {
+        border: 1px solid black;
         text-align: center;
-        font-size: 200%;
-        color: #fff;
+        vertical-align: middle;
+        line-height: 50px;
+      }
+
+      .box {
+        display: grid;
+        grid-template-columns: 200px auto 200px;
+      }
+
+      .block {
+        height: 50px;
+        font-size: 14px;
+      }
+
+      .left {
+        background-color: red;
+      }
+
+      .center {
+        background-color: yellow;
+      }
+
+      .right {
+        background-color: green;
+      }
+
+      header,
+      footer {
+        height: 50px;
+        background-color: aquamarine;
       }
     </style>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="one item">One</div>
-      <div class="two item">Two</div>
-      <div class="three item">Three</div>
-      <div class="four item">Four</div>
-      <div class="five item">Five</div>
-      <div class="six item">Six</div>
+    <header>header</header>
+    <div class="box">
+      <div class="block left">left</div>
+      <div class="block center">center</div>
+      <div class="block right">right</div>
     </div>
+    <footer class="bottom">bottom</footer>
   </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .box11 {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        transform: translate(30px, 0);
+      }
+
+      .box12 {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        transform: translate(30px, 0) rotate(45deg);
+      }
+
+      .box21 {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        transform: rotate(45deg);
+      }
+
+      .box22 {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        transform: rotate(45deg) translate(30px, 0);
+      }
+
+      .root {
+        padding-top: 40px;
+      }
+
+      .box {
+        height: 250px;
+        position: relative;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="box">
+        <div class="box11">box1 translate</div>
+        <div class="box12">box1 translate+rotate</div>
+      </div>
+      <div class="box">
+        <div class="box21">box2 rotate</div>
+        <div class="box22">box2 rotate+translate</div>
+      </div>
+    </div>
+  </body>
+</html>

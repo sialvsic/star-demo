@@ -30,3 +30,8 @@ var twoSum = function (nums, target) {
 
 const r = twoSum(nums, target);
 console.log("r", r);
+
+/*
+log
+2022.08.08
+*/

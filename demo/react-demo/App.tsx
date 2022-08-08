@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs } from "antd";
 import StateHook from "./StateHook";
 import StateClass from "./StateClass";
+import UseLayout from "./UseLayout";
 import "antd/dist/antd.css";
 import "./App.less";
 
@@ -25,6 +26,9 @@ function App() {
         </TabPane>
         <TabPane tab="setState class" key="1">
           <StateClass />
+        </TabPane>
+        <TabPane tab="use layout" key="2">
+          <UseLayout />
         </TabPane>
       </Tabs>
     </div>

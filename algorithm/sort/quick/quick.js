@@ -1,11 +1,9 @@
 function partition(arr, startIndex, endIndex) {
-
   let pivot = arr[startIndex];
   let left = startIndex;
   let right = endIndex;
 
   while (left !== right) {
-
     //控制right指针并左移
     while (left < right && arr[right] > pivot) {
       right--;
@@ -37,11 +35,10 @@ function quick_sort(arr, startIndex, endIndex) {
   }
 
   let pivot = partition(arr, startIndex, endIndex);
-  console.log(pivot);
+  console.log("pivot", pivot);
   quick_sort(arr, startIndex, pivot - 1);
   quick_sort(arr, pivot + 1, endIndex);
 }
-
 
 let before_sort = [1, 5, 100, 102, 1, 3, 4, 77, 6, 2, 3, 4, 7, 9, 0];
 // let before_sort = [3, 5, 4, 1, 2, 9, 8, 7, 6];

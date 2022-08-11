@@ -4,7 +4,7 @@ const path = require("path");
 const outputPath = path.join(__dirname, "./temp.png");
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   await page.setViewport({
     width: 1680,

@@ -2,9 +2,9 @@
 实现一个批量请求函数 multiRequest(urls, maxNum)
 
 要求试下：
-• 要求最大并发数 maxNum
-• 每当有一个请求返回，就留下一个空位，可以增加新的请求
-• 所有请求完成后，结果按照 urls 里面的顺序依次打出
+- 要求最大并发数 maxNum
+- 每当有一个请求返回，就留下一个空位，可以增加新的请求
+- 所有请求完成后，结果按照 urls 里面的顺序依次打出
 */
 
 function multiRequest(urls = [], maxNum) {
@@ -57,6 +57,68 @@ function multiRequest(urls = [], maxNum) {
   });
 }
 
+class Task {
+  constructor(max) {
+    this.maxNums = max;
+    this.list = [];
+    this.runNums = 0;
+  }
+
+  add(fn, index) {
+    return new Promise((resolve, reject) => {
+      const task = () => {
+        return fn()
+          .then((res) => res.json())
+          .then((res) => {
+            const data = res;
+            resolve({
+              index: index,
+              data: data,
+            });
+          });
+      };
+
+      this.list.push(task);
+      this.run();
+    });
+  }
+
+  run() {
+    console.log("this.list", this.list);
+    while (this.runNums < this.maxNums && this.list.length !== 0) {
+      this.runNums++;
+      const task = this.list.shift();
+      console.log("task", task);
+      task().then(() => {
+        this.runNums--;
+        this.run();
+      });
+    }
+  }
+}
+
+function multiRequest1(urls = [], maxNum) {
+  return new Promise((resolve, reject) => {
+    let count = 0;
+    const task = new Task(maxNum);
+    let result = [];
+    for (let i = 0; i < urls.length; i++) {
+      const url = urls[i];
+      task
+        .add(() => fetch(url), i)
+        .then((res) => {
+          console.log("res", res);
+          count++;
+          result[i] = res;
+
+          if (count === urls.length) {
+            resolve(result);
+          }
+        });
+    }
+  });
+}
+
 const urls = [
   "http://127.0.0.1:3000/test/1",
   "http://127.0.0.1:3000/test/2",
@@ -71,4 +133,13 @@ async function run() {
   console.log("r", r);
 }
 
-run();
+async function run1() {
+  const r = await multiRequest1(urls, 3);
+  console.log("r", r);
+}
+
+// 方法1
+// run();
+
+// 方法2 better
+run1();

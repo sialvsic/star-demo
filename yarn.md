@@ -42,6 +42,10 @@ yarn workspace libs add @types/lodash -D
 yarn workspace libs add ejs
 yarn workspace libs add @types/ejs -D
 yarn workspace libs add nodemailer
+yarn workspace libs add @apollo/client
+yarn workspace libs add @cyberlab/cyberconnect
+yarn workspace libs add graphql
+yarn workspace libs add cross-fetch
 ```
 
 ## https

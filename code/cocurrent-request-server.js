@@ -3,6 +3,14 @@ const app = new Koa();
 
 // logger
 
+function timer(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(time);
+    }, time);
+  });
+}
+
 app.use(async (ctx, next) => {
   await next();
   const rt = ctx.response.get("X-Response-Time");
@@ -30,6 +38,7 @@ app.use(async (ctx) => {
     const end = params[2];
     if (end < 3) {
       ctx.status = 201;
+      await timer(1000);
       ctx.body = {
         order: end,
       };

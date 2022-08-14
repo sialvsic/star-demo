@@ -1,9 +1,9 @@
 // 前端并发10个相同的请求，怎么控制为只发一个请求
 
 async function fetchData(a) {
-  const data = await fetch(`http://127.0.0.1:3000/test/${a}`);
+  const data = await fetch(`http://localhost:3000/test/${a}`);
   const d = await data.json();
-  console.log(d);
+  // console.log(d);
   return d;
 }
 
@@ -13,7 +13,7 @@ function cacheAsync(fn, symbol) {
 
   return async function (params) {
     return new Promise((resolve, reject) => {
-      symbol = symbol || params;
+      symbol = params || symbol;
       let cacheCfg = cache.get(symbol);
 
       if (!cacheCfg) {
@@ -61,9 +61,33 @@ function cacheAsync(fn, symbol) {
 
 var fetch2 = cacheAsync(fetchData, "test2");
 
-fetch2(2); // 编号 1
-fetch2(2); // 2
-fetch2(2); // 3
-fetch2(2); // 4
-fetch2(2); // 4
-fetch2(2); // 5
+console.log(
+  fetch2(1).then((res) => {
+    console.log("res1", res);
+  })
+);
+console.log(
+  fetch2(1).then((res) => {
+    console.log("res2", res);
+  })
+);
+console.log(
+  fetch2(2).then((res) => {
+    console.log("res3", res);
+  })
+);
+console.log(
+  fetch2(1).then((res) => {
+    console.log("res4", res);
+  })
+);
+console.log(
+  fetch2(1).then((res) => {
+    console.log("res5", res);
+  })
+);
+console.log(
+  fetch2(1).then((res) => {
+    console.log("res6", res);
+  })
+);

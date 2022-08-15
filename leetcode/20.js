@@ -9,7 +9,7 @@
 '[(])' // false
 */
 
-function judge(text) {
+var isValid = function (s) {
   const map = new Map();
   map.set("(", ")");
   map.set("{", "}");
@@ -17,8 +17,8 @@ function judge(text) {
 
   const arr = [];
 
-  for (let index = 0; index < text.length; index++) {
-    const element = text.charAt(index);
+  for (let index = 0; index < s.length; index++) {
+    const element = s.charAt(index);
 
     if (map.has(element)) {
       arr.push(element);
@@ -33,9 +33,9 @@ function judge(text) {
     }
   }
   return arr.length === 0;
-}
+};
 
-console.log(judge("()"));
+console.log(isValid("()"));
 // console.log(judge("({})"));
 // console.log(judge("[()"));
 // console.log(judge("[(])"));

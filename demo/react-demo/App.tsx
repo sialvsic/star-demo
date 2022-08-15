@@ -3,6 +3,7 @@ import { Tabs } from "antd";
 import StateHook from "./StateHook";
 import StateClass from "./StateClass";
 import UseLayout from "./UseLayout";
+import Event from "./Event";
 import "antd/dist/antd.css";
 import "./App.less";
 
@@ -18,7 +19,7 @@ function App() {
       <Tabs
         onChange={onChange}
         type="card"
-        defaultActiveKey="0"
+        defaultActiveKey="3"
         destroyInactiveTabPane
       >
         <TabPane tab="setState hook" key="0">
@@ -29,6 +30,9 @@ function App() {
         </TabPane>
         <TabPane tab="use layout" key="2">
           <UseLayout />
+        </TabPane>
+        <TabPane tab="event" key="3">
+          <Event />
         </TabPane>
       </Tabs>
     </div>

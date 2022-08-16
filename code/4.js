@@ -59,6 +59,7 @@ function flow_2(fns) {
 // const fn_lodash = _.flow([add, square]);
 const fn = flow([add, square]);
 const fn_2 = flow_2([add, add, square]);
+
 const fn_lodash = _.flow([add, add, square]);
 const fn_args = flow_args(add, add, square);
 

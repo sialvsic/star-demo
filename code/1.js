@@ -12,59 +12,20 @@ namespace({ a: { test: 1, b: 2 }}, 'a.b.c.d')
 // a[b[c[d]]]
 
 function namespace(oNamespace, sPackage) {
-  var obj = sPackage.split(".");
-  return find(oNamespace, obj.length, obj);
+  const packageName = sPackage.split(".");
+  let space = oNamespace;
+  let temp = space;
+  for (let i = 0; i < packageName.length; i++) {
+    const item = packageName[i];
+
+    if (typeof space[packageName[i]] != "object") {
+      space[item] = {};
+    }
+    space = space[item];
+  }
+  return temp;
 }
 
-function find(oNamespace, length, obj) {
-  console.log(oNamespace, length, obj);
-
-  if (length <= 0) {
-    return { [obj[obj.length - length]]: {} };
-  }
-
-  if (oNamespace !== Object(oNamespace)) {
-    const temp = { [obj[obj.length - length]]: {} };
-    // console.log("temp");
-    // console.log(temp);
-    return oNamespace[find(temp, length - 1, obj)];
-  } else if (length >= 0) {
-    return (oNamespace[obj.length - length] = {});
-  }
-
-  return oNamespace[
-    find(oNamespace[obj[obj.length - length]], length - 1, obj)
-  ];
-}
-
-const result = namespace({ a: { test: 1, b: 2 } }, "a.b.c.d"); //有问题
-console.log(result);
-
-// return oNamespace[obj.length - length] = {};
-
-// 方法2
-function namespace1(oNamespace, sPackage) {
-  const arr = sPackage.slice(0, 2);
-  const newArr = sPackage.slice(2);
-
-  let obj = {};
-  const key = arr[0];
-
-  if (newArr.length !== 0) {
-    const isObject = typeof oNamespace[key] === "object";
-
-    Object.assign(obj, oNamespace);
-    const o = namespace1(isObject ? oNamespace[key] : {}, newArr);
-    obj[key] = o;
-    // Object.assign(obj, {
-    //   [key]: o,
-    // });
-  } else {
-    obj[key] = {};
-  }
-
-  return obj;
-}
-
-// const result1 = namespace1({ a: { test: 1, b: 2 } }, "a.b.c.d");
-// console.log("result1", result1);
+const result = namespace({ a: { test: 1, b: 2 } }, "a.b.c.d");
+console.log("result", result); //{ a: { test: 1, b: { c: { d: {}}}}}
+console.log("result", JSON.stringify(result)); //{ a: { test: 1, b: { c: { d: {}}}}}

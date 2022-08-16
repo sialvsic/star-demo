@@ -1,8 +1,4 @@
-/*
-1991.找到数组的中间位置
-https://leetcode.cn/problems/find-the-middle-index-in-array/solution/1991zhao-dao-shu-zu-de-zhong-jian-wei-zh-e8cp/
-
-*/
+// 1991. 找到数组的中间位置 https://leetcode.cn/problems/find-the-middle-index-in-array/solution/1991zhao-dao-shu-zu-de-zhong-jian-wei-zh-e8cp/
 
 /**
  * @param {number[]} nums

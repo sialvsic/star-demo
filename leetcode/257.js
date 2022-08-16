@@ -1,5 +1,17 @@
 // 257. 二叉树的所有路径 https://leetcode.cn/problems/binary-tree-paths/
 
+/*
+给一个二叉树，返回所有的根到叶的路径。
+例如： 
+   1           
+ /   \
+2     3
+ \ 
+  5
+返回:["1->2->5", "1->3"]
+ 
+*/
+
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {

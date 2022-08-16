@@ -1,4 +1,33 @@
-// 101 https://leetcode.cn/problems/symmetric-tree/
+// 101. 对称二叉树 https://leetcode.cn/problems/symmetric-tree/
+
+const symmetricalTree = {
+  val: 8,
+  left: {
+    val: 6,
+    left: { val: 5, left: null, right: null },
+    right: { val: 7, left: null, right: null },
+  },
+  right: {
+    val: 6,
+    left: { val: 7, left: null, right: null },
+    right: { val: 5, left: null, right: null },
+  },
+};
+
+//非对称二叉树
+const binaryTree = {
+  val: 8,
+  left: {
+    val: 6,
+    left: { val: 5, left: null, right: null },
+    right: { val: 7, left: null, right: null },
+  },
+  right: {
+    val: 6,
+    left: { val: 7, left: null, right: null },
+    right: { val: 6, left: null, right: null },
+  },
+};
 
 /**
  * Definition for a binary tree node.
@@ -37,4 +66,8 @@ var isSymmetric = function (root) {
 };
 
 const root = [1, 2, 2, 3, 4, 4, 3];
-const r = isSymmetric(root);
+// const r = isSymmetric(root);
+
+// 测试
+console.log(isSymmetric(symmetricalTree)); //对称
+console.log(isSymmetric(binaryTree)); //不对称

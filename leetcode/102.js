@@ -18,14 +18,12 @@ var levelOrder = function (root) {
   }
 
   let arr = [];
-  let result = [];
+  let result = [[root.val]];
   arr.push(root);
 
   while (arr.length !== 0) {
     const element = arr.splice(0);
     let temp = [];
-    console.log("arr", arr);
-    console.log("element", element);
 
     for (let i = 0; i < element.length; i++) {
       const item = element[i];

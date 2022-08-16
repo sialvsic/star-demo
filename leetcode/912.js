@@ -15,6 +15,7 @@ var sortArray = function (nums) {
   return nums;
 };
 
+//快速排序
 var sortArray = function (nums) {
   function pivot(nums, start, end) {
     let pivot = nums[start];

@@ -1,4 +1,4 @@
-// 94 二叉树中序遍历 https://leetcode.cn/problems/binary-tree-inorder-traversal/
+// 94. 二叉树中序遍历 https://leetcode.cn/problems/binary-tree-inorder-traversal/
 
 /**
  * Definition for a binary tree node.
@@ -22,25 +22,27 @@ function TreeNode(val, left, right) {
 var inorderTraversal = function (root) {
   let arr = [];
 
-  function dfs() {
+  if (!root) {
+    return arr;
+  }
+
+  function dfs(root) {
     if (!root) {
       return null;
     }
 
     if (root.left) {
-      arr = arr.concat(inorderTraversal(root.left));
+      dfs(root.left);
     }
 
     arr.push(root.val);
 
     if (root.right) {
-      arr = arr.concat(inorderTraversal(root.right));
+      dfs(root.right);
     }
   }
 
-  if (root) {
-    dfs(root);
-  }
+  dfs(root);
 
   return arr;
 };

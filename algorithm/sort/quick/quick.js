@@ -25,7 +25,6 @@ function partition(arr, startIndex, endIndex) {
   arr[left] = arr[startIndex];
   arr[startIndex] = p;
 
-  console.log(arr);
   return left;
 }
 

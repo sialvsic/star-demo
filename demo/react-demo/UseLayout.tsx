@@ -11,6 +11,10 @@ export default function UseLayout() {
     // }
 
     setState("world hello");
+
+    return () => {
+      console.log("UseLayout  unmount");
+    };
   }, []);
 
   useLayoutEffect(() => {

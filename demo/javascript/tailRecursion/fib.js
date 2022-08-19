@@ -11,5 +11,6 @@ function fib(n) {
 
 console.time("start");
 const f = fib(40); //1.4s
+const f1 = fib(45); //17.4s
 console.log("f", f);
 console.timeEnd("start");

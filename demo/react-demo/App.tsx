@@ -4,6 +4,7 @@ import StateHook from "./StateHook";
 import StateClass from "./StateClass";
 import UseLayout from "./UseLayout";
 import Event from "./Event";
+import CountDown from "./CountDown";
 import "antd/dist/antd.css";
 import "./App.less";
 
@@ -19,7 +20,7 @@ function App() {
       <Tabs
         onChange={onChange}
         type="card"
-        defaultActiveKey="3"
+        defaultActiveKey="1"
         destroyInactiveTabPane
       >
         <TabPane tab="setState hook" key="0">
@@ -33,6 +34,9 @@ function App() {
         </TabPane>
         <TabPane tab="event" key="3">
           <Event />
+        </TabPane>
+        <TabPane tab="Countdown" key="4">
+          <CountDown number={10} />
         </TabPane>
       </Tabs>
     </div>

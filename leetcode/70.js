@@ -1,8 +1,8 @@
-// 70. 爬楼梯 leetcode.cn/problems/climbing-stairs/
+// 70. 爬楼梯 https://leetcode.cn/problems/climbing-stairs/
 
 /**
  * @param {number} n
- * @return {number}
+ * @return {number}e
  */
 var climbStairs = function (n) {
   if (n === 1) {

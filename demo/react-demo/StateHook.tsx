@@ -13,7 +13,8 @@ export default function StateHook() {
       setCount(2);
       console.log(count);
       //count不更新
-    });
+    }, 0);
+    console.log(count);
   }, []);
 
   console.log("count", count);
